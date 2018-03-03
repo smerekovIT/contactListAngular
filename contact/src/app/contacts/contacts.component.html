@@ -1,0 +1,4 @@
+<ul>
+  <li *ngFor="let contact of contacts"  [class.selected]="contact === selectedContact" (click)="showContact(contact)" >{{contact | jsonTransformString}}</li>
+</ul>
+<app-contacts-details [contact]="selectedContact"></app-contacts-details>
